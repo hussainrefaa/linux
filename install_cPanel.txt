@@ -1,0 +1,28 @@
+-- Author: 	Hussen refaa
+-- creation Date: 	2008
+-- Last Updated: 	0000-00-00
+-- Control Number:	xxxx-xxxx-xxxx-xxxx
+-- Version: 	0.0
+-- Phone : +4915775148443
+-- Email: hus244@gmail.com
+
+1.  SSH into your instance (Your username may be ec2-user)
+2.  Take root
+# sudo su
+3.  Install Perl
+#yum install perl
+4.  Install WGET
+# yum install wget
+5.  Go to home
+# cd /home
+6.  Get latest cPanel
+# wget -N http://httpupdate.cpanel.net/latest
+7.  Execute installation files
+# sh latest
+8.  Wait while it installs (can take a while)
+9.  Set root password follow the instructions.
+# passwd root 
+10.  In a browser, go to https://Your.IP.Address:/2087
+11.  Use root as the name and your root password as the password, click login
+You should now be in your fresh install of WHM ready for you to configure to your liking. 
+I recommend configuring a security policy to regulate the ports we opened at the beginning. Also, don’t forget to set your hostnames.

@@ -1,0 +1,25 @@
+1-
+sudo apt-get update
+
+2-
+sudo apt-get install apache2 php5 php5-dev 
+
+3-
+cd var/www/html
+4-
+sudo nano index.php
+
+<?php
+	phpinfo();
+?>
+
+save and exit
+
+5-
+
+go web browser 
+
+
+http://192.168.33.10/index.php
+
+6- apache2 service  restart

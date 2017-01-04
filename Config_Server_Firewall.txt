@@ -1,0 +1,6 @@
+1. rm -fv csf.tgz
+2. lynx http://www.configserver.com/free/csf.tgz
+3. tar -xzf csf.tgz
+4. cd csf
+5. sh install.sh
+6. service cpanel restart

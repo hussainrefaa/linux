@@ -1,0 +1,21 @@
+1- install apache2 and php
+2- go vagrant folder in machine and create folder www/html
+
+craete 2 files for example named: 
+index.html
+file1.txt
+
+3- change the owner of directory to www-data
+
+change owner
+
+chown www-data:www-data /vagrant/www/html
+chown www-data:www-data /vagrant/www/html/index.html
+chown www-data:www-data /vagrant/www/html/file1.txt
+
+4- change mode
+chmod 777 index.html
+chmod 777 file1.txt
+
+5-
+systemctl restart apache2

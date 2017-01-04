@@ -1,0 +1,4 @@
+su root
+
+service tomcat start
+service tomcat restart

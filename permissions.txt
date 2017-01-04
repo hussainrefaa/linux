@@ -1,0 +1,15 @@
+http://linuxcommand.org/lts0070.php
+
+sudo chown -R www-data /vagrant/www/
+sudo chown -R www-data /vagrant/www/index.html
+sudo chown -R www-data /vagrant/www/file1.txt
+sudo chown -R www-data /vagrant/www/index.php
+
+
+chown www-data:www-data /vagrant/www/html
+chown www-data:www-data /vagrant/www/index.html
+chown www-data:www-data /vagrant/www/file1.txt
+chown www-data:www-data /vagrant/www/index.php
+
+systemctl restart apache2
+

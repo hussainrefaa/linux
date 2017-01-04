@@ -1,0 +1,3 @@
+/etc/rc.d/init.d/tomcat start
+or
+./startup.sh

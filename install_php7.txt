@@ -1,0 +1,74 @@
+https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/
+
+1-
+sudo su
+
+2- 
+apt-get -y install mariadb-server mariadb-client
+3-
+mysql_secure_installation
+4- Test the login to MariaDB with the "mysql command"
+mysql -u root -p
+
+quit or CTRL + D
+
+5-
+apt-get -y install apache2
+
+6-
+
+apt-get -y install php7.0 libapache2-mod-php7.0
+
+7-
+systemctl restart apache2
+
+8-
+
+nano /var/www/html/info.php
+
+<?php
+phpinfo();
+?>
+
+chown www-data:www-data /var/www/html/info.php
+
+save and exit
+
+9- To get MySQL support in PHP, we can install the php7.0-mysql package.
+ It's a good idea to install some other PHP modules as well as you might
+ need them for your applications. You can search for available PHP modules like this:
+apt-cache search php7.0
+
+
+10-
+Pick the ones you need and install them like this:
+apt-get -y install php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext
+
+11-
+Now restart Apache2:
+
+systemctl restart apache2
+
+12- 
+APCu is a free PHP opcode cacher for caching and optimizing PHP intermediate code. It is strongly recommended to have an Opcache installed to speed up your PHP page.
+APCu can be installed as follows:
+apt-get -y install php-apcu
+
+13-
+Now restart Apache:
+systemctl restart apache2
+
+14-
+Enable the SSL website in apache
+SSL/ TLS is a security layer to encrypt the connection between the web browser and your server. 
+Execute the following commands on your server to enable https:// support. Run:
+a2enmod ssl
+a2ensite default-ssl
+
+15-
+Now restart Apache:
+systemctl restart apache2
+
+16- 
+echo "update user set plugin='' where User='root'; flush privileges;" | mysql -u root -p mysql
+

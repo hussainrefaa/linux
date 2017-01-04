@@ -1,0 +1,1 @@
+scp -r E:\wamp\www\traccar\traccar.php root@82.165.74.200:8443:/traccar-hussain

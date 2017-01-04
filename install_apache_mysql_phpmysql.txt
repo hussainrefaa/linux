@@ -1,0 +1,42 @@
+-- install http
+1- yum -y install http
+2- chkconfig --levels 3 httpd on
+3- service httpd start
+--- install mysql
+1- sudo yum -y install mysql mysql-server
+2- mysql_secure_installation
+   if doesn't run do:
+ #  chkconfig --levels 3 httpd on
+ # service mysqld start
+  then try again
+ If no success :
+# shutdown -h now
+Or restart server
+
+--- Install Php
+# yum -y install php
+--- enable php service
+# service httpd restart
+or 
+# service httpd stop
+# service httpd start
+
+#vi /var/www/html/info.php
+ add this line:
+ To type in file : INSERT Button
+ To exit vi and save changes  :ZZ   or  :wq
+ :w 	saves the current file without quitting
+ :#	move to line #
+ :$	move to last line of file
+ <?php phpinfo(); ?>
+ OR:
+# echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+--- install php mysql
+# yum -y install php-mysql php-gd php-mbstring php-odbc php-pear php-xml php-xmlrpc 
+-- Test Server
+http://54-75-33-104:2087/phpinfo.php
+http://ec2-54-74-76-228.eu-west-1.compute.amazonaws.com/phpinfo.php
+--- remove mysql
+# sudo yum remove mysql mysql-server
+# sudo mv /var/lib/mysql /var/lib/mysql_old_backup
+# sudo yum install mysql mysql-server

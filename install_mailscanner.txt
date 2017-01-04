@@ -1,0 +1,4 @@
+# lynx http://www.configserver.com/free/msinstall.tar.gz
+tar -xzf msinstall.tar.gz
+cd msinstall/
+sh install.sh

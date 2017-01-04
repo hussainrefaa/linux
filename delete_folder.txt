@@ -1,0 +1,16 @@
+Source :
+http://www.thegeekstuff.com/2009/06/how-to-linux-delete-directory-using-rmdir-rm-command/
+1- Delete Empty Directories 
+# rmdir DIRNAME
+2- Delete Nested Empty Directories
+# rmdir -p dir1/dir2/dir3
+3- Delete Directory Which has Content
+# rm -rf DIRNAME
+4- Delete Interactively: Avoid using -f in rm at the early stages.
+# rm -ir DIRNAME
+5- Deleting a file interactively.
+# rm -i FILENAME
+6- Useful rm and rmdir Aliases
+# alias rm="rm -i"
+Alias to make rm interactive
+# alias rm="rm -i"

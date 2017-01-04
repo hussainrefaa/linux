@@ -1,0 +1,2 @@
+https://46.32.249.38:2087/scripts2/doautofixer?autofix=safesshrestart
+Then enter root password

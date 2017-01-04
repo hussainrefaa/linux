@@ -1,0 +1,12 @@
+Note: This command will take about 5 minute to take effect
+Block IP Address:
+# iptables -A INPUT -s 195.175.62.34 -j DROP
+# service iptables save
+
+UnBlock IP Address:
+# iptables -D INPUT -s 195.175.62.34 -j DROP
+# service iptables save
+
+If you just want to block access to one port from an ip 
+195.175.62.34 to port 25 then type command:
+# iptables -A INPUT -s 195.175.62.34 -p tcp --destination-port 25 -j DROP

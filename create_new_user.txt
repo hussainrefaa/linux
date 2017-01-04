@@ -1,0 +1,29 @@
+1. Log into your server with an SSH client, then "su -" to root (do not forget the "-" after su).
+
+2. Add the user and set the password:
+# su -
+# adduser testuser
+# passwd testuser
+Changing password for user testuser.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+
+3. By default, a user has shell access (SSH or telnet if enabled). Users should not have shell access unless they really need it. Web site users and e-mail only users do not need shell access.
+
+# chsh -s /sbin/nologin testuser
+Changing shell for testuser.
+Shell changed.
+
+4. If you have an FTP server running, the user will also have FTP access. If users will only be checking mail, you will want to disable FTP access as well as shell access. Adding their username to /etc/ftpusers will prevent them from logging into FTP.
+
+# echo testuser >> /etc/ftpusers 
+
+------------------------------------
+Drop user
+To delete user with directory 
+# userdel -r username
+# userdel testuser
+
+-------------------------------------
+List Users

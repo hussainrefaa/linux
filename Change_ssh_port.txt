@@ -1,0 +1,12 @@
+Establish an SSH connexion to your server and connect as root.
+Edit the SSH daemon configuration file:
+
+# nano /etc/ssh/sshd_config
+
+Set a different port for incoming SSH connections by changing this line:
+
+Port 22
+to:
+Port 22200
+
+# service sshd restart

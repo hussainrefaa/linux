@@ -1,0 +1,3 @@
+cd /usr/src
+wget http://download.ndchost.com/accountdnscheck/latest-accountdnscheck
+sh latest-accountdnscheck

@@ -1,0 +1,10 @@
+1- mysql -u root -p mysql
+2- create database:
+
+mysql> create database appdb;
+mysql> grant all on appdb.* to 'appuser'@'localhost' identified by 'password';
+mysql> quit
+
+-- You should test access to the database with the new application user.
+
+mysql -u appuser -p -h localhost appdb

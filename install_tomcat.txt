@@ -1,0 +1,2 @@
+http://www.davidghedini.com/pg/entry/install_tomcat_7_on_centos
+/etc/rc.d/init.d/tomcat start

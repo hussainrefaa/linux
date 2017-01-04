@@ -1,0 +1,18 @@
+Upload  File from Linux Server
+-------------------------------------------------------------------
+C:\>pscp root@82.165.74.200:/opt/traccar/data/database.trace.db c:\
+root@82.165.74.200's password:
+database.trace.db         | 0 kB |   0.2 kB/s | ETA: 00:00:00 | 100%
+
+C:\>pscp root@82.165.74.200:/opt/traccar/data/database.mv.db c:\
+root@82.165.74.200's password:
+database.mv.db            | 76 kB |  76.0 kB/s | ETA: 00:00:00 | 100%
+---------------------------------------------------------------------
+Downlod File To Linux Server
+
+C:\>pscp  c:\filename.txt root@82.165.74.200:/opt/traccar/data/
+-----------------------------------------------------------------------
+copy Directory to windows:
+
+ pscp -r root@82.165.74.200:/var/lib/mysql/traccar c:\traccar\
+

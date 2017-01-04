@@ -1,0 +1,3 @@
+this command to update all current software in system
+# yum update
+# sudo yum update

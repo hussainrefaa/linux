@@ -1,0 +1,18 @@
+vi /etc/my.cnf
+cat /etc/my.cnf
+-------------------------
+edit my.cnf file
+1- sudo gedit /etc/my.cnf
+or 
+nano /etc/my.cnf
+2- innodb_buffer_pool_size = 1G
+   innodb_flush_log_at_trx_commit=2
+   innodb_flush_method=O_DIRECT (for non-windows machine)
+   innodb_buffer_pool_size=25GB (currently it is close to 21GB )
+   innodb_doublewrite=0
+   innodb_support_xa=0
+innodb_thread_concurrency=0...1000 (try different values, beginning with 200)
+3- Enter Ctrl + O to "WriteOut" or save the settings.
+4- Then Ctrl + X to exit.
+5- Restart MySQL by typing the following.
+   service mysql restart 
