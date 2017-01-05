@@ -13,6 +13,19 @@ chown www-data:www-data /vagrant/www/html
 chown www-data:www-data /vagrant/www/html/index.html
 chown www-data:www-data /vagrant/www/html/file1.txt
 
+4- got the :
+/etc/apache2/sites-enabled
+sudo nano 000-default.conf
+Make change for 
+DocumentRoot /vagrant/www/
+  
+ -- add this config
+<Directory /vagrant/www>
+	Options -Indexes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Require all granted
+</Directory>
+
 4- change mode
 chmod 777 index.html
 chmod 777 file1.txt
